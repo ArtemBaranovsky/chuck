@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'small': 380px,
+        'medium': 834px,
+        'large': 1440px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// All fonts
+$font-roboto-sans: 'Roboto-Sans', sans-serif;
+$font-roboto-sans-bold: 'Roboto-Sans-Bold', sans-serif;
+$font-roboto-sans-light: 'Roboto-Sans-Light', sans-serif;
+//$font-publica-sans-black: 'Publica-Sans-Black', sans-serif;
+//$font-publica-sans-blackitalic: 'Publica-Sans-BlackItalic', sans-serif;
+
+
+// Colors
+$black: #000000;
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$bombay: #a9abae;
+$mexicanRed: #a52323;
+$mineShaft: #333333;
+$silverChalice: #ABABAB;
+$white: #ffffff;
+$silver: #cccccc;
+$dark-silver: #bababa;
+$abbey: #4b4b4d;
+$white-smoke: #eaeaea;
+$alabaster: #F8F8F8;
+$mercury: #E5E5E5;
+$malibu: #8EA7FF;

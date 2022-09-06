@@ -1,0 +1,395 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+//@use 'base/base';
+
+// Properties for smaller screens.
+//body {
+//  background: yellow;
+//  float: none;
+//  width: 100%;
+//}
+
+//.content {
+//  //min-width: 380px;
+//}
+//
+//.sidebar {
+//  //min-width: 380px;
+//}
+
+/* Clear floats after the columns */
+//.row:after {
+//  content: "";
+//  display: table;
+//  clear: both;
+//}
+
+// This applies from 600px onwards
+//@media (min-width: 380px) {
+//}
+#home {
+  // Mobile devices
+  section {
+    display:flex;
+    flex-direction: column;
+    height: 900px;
+    line-height: 44px;
+
+    .label {
+      font: 20px/28px $font-roboto-sans-bold;
+      margin-bottom: 79px;
+    }
+
+    .content {
+      float: left;
+      min-width: 340px;
+      max-width: 100%;
+      //width: 66.66%;
+      margin: 20px 20px 20px 20px;
+      background: $white;
+
+      .form {
+        font: 20px/28px $font-roboto-sans-bold;
+        display: block;
+
+        .container {
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 22px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+
+            /* When the radio button is checked, add a blue background */
+            &:checked ~ .checkmark {
+
+              /* Show the indicator (dot/circle) when checked */
+              &:after {
+                display: block;
+              }
+            }
+          }
+
+          /* Style the indicator (dot/circle) */
+          .checkmark:after {
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $mineShaft;
+          }
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          border: $mineShaft solid 2px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+        }
+
+        .search, .nav-panel {
+          display: none;
+        }
+
+        .search {
+          //display: flex;
+          margin: 20px 0;
+          width: 100%;
+          height: 42px;
+          /* Style the input field inside the navbar */
+          &[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font: 16px/22px Roboto-Sans;
+            border: 2px solid $mineShaft;
+            border-radius: 10px;
+            box-sizing: border-box;
+            color: $silverChalice;
+          }
+        }
+      }
+
+      .jokes-list {
+        margin-top: 40px;
+
+        .joke-item {
+          height: 225px;
+          width: 100%;
+          background: $alabaster;
+          border-radius: 20px;
+          margin-bottom: 20px;
+
+          .like {
+            display: flex;
+            img {
+              margin: 40px 40px 10px auto;
+              float: right;
+            }
+          }
+
+          .left {
+            width: 80px;
+
+            img {
+              max-width: 60%;
+              height: auto;
+              align-items: flex-start;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+          .right {
+            flex: 1;
+            margin-right: 60px;
+          }
+          .joke-id {
+            height: 14px;
+            font: 10px/14px Roboto-Sans-Normal;
+
+            span {
+              color: $silverChalice;
+            }
+          }
+          .joke-text {
+            font: 18px/16px Roboto-Sans-Regular;
+            line-height: 26px;
+            margin-bottom: 28px;
+          }
+
+          .joke-footer {
+            justify-content: space-between;
+          }
+
+          .category {
+            height: 12px;
+            align-self: center;
+            line-height: 14px;
+            font: 10px/14px Roboto-Sans-Normal;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $mineShaft;
+          }
+        }
+      }
+    }
+
+    .sidebar {
+      float: left;
+      min-width: 480px;
+      width: 33.33%;
+      background: $alabaster;
+
+      .title {
+        height: 28px;
+        font: 20px/28px Roboto-Sans-Regular;
+        color: $silverChalice;
+        margin: 40px;
+      }
+    }
+  }
+
+  @media (min-width: 834px) {
+    body {
+      //background: orange;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    section {
+      display: flex;
+      flex-direction: row; // !
+      height: 900px;
+      line-height: 44px;
+
+      .label {
+        font: 20px/28px $font-roboto-sans-bold;
+        margin-bottom: 79px;
+      }
+
+      .content {
+        float: left;
+        min-width: 680px;  // !
+        width: 66.66%; // !
+        margin: 40px 140px 140px 140px; // !
+        background: $white;
+
+        .form {
+          font: 20px/28px $font-roboto-sans-bold;
+          display: block;
+
+          .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+
+              /* When the radio button is checked, add a blue background */
+              &:checked ~ .checkmark {
+
+                /* Show the indicator (dot/circle) when checked */
+                &:after {
+                  display: block;
+                }
+              }
+            }
+
+            /* Style the indicator (dot/circle) */
+            .checkmark:after {
+              top: 3px;
+              left: 3px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: $mineShaft;
+            }
+          }
+
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: $mineShaft solid 2px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              display: none;
+            }
+          }
+
+          .search, nav-panel {
+            display: none;
+          }
+
+          .search {
+            //display: flex;
+            margin: 20px 0;
+            width: 100%;
+            height: 42px;
+            /* Style the input field inside the navbar */
+            &[type=text] {
+              padding: 6px;
+              margin-top: 8px;
+              font: 16px/22px Roboto-Sans;
+              border: 2px solid $mineShaft;
+              border-radius: 10px;
+              box-sizing: border-box;
+              color: $silverChalice;
+            }
+          }
+        }
+
+        .jokes-list {
+          margin-top: 40px;
+
+          .joke-item {
+            height: 225px;
+            width: 100%;
+            background: $alabaster;
+            border-radius: 20px;
+            margin-bottom: 20px;
+
+            .like {
+              display: flex;
+              img {
+                margin: 40px 40px 10px auto;
+                float: right;
+              }
+            }
+
+            .left {
+              width: 100px;
+
+              img {
+                max-width: 60%;
+                height: auto;
+                align-items: flex-start;
+                display: block;
+                margin: 0 auto;
+              }
+            }
+            .right {
+              flex: 1;
+              margin-right: 60px;
+            }
+            .joke-id {
+              height: 14px;
+              font: 10px/14px Roboto-Sans-Normal;
+
+              span {
+                color: $silverChalice;
+              }
+            }
+            .joke-text {
+              font: 18px/16px Roboto-Sans-Regular;
+              line-height: 26px;
+              margin-bottom: 28px;
+            }
+
+            .joke-footer {
+              justify-content: space-between;
+            }
+
+            .category {
+              height: 12px;
+              align-self: center;
+              line-height: 14px;
+              font: 10px/14px Roboto-Sans-Normal;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: $mineShaft;
+            }
+          }
+        }
+      }
+
+      .sidebar {
+        float: left;
+        min-width: 480px;
+        width: 33.33%;
+        background: $alabaster;
+
+        .title {
+          height: 28px;
+          font: 20px/28px Roboto-Sans-Regular;
+          color: $silverChalice;
+          margin: 40px;
+        }
+      }
+    }
+  }
+}

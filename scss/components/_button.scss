@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 152px;
+  height: 42px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $white;
+  background: linear-gradient(90.55deg, #8EA7FF 0%, #7291FF 100%);;
+}
+
+.btn-group {
+  margin: 20px 0 23px 0;
+
+  .navbtn {
+    float: left;
+    height: 28px;
+    padding: 6px 15px;
+    border-radius: 6px;
+    border: 2px solid $alabaster;
+    background-color: $white;
+    color: $silverChalice;
+    font: 12px/16px Roboto-Sans-Normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:not(:last-of-type) {
+      margin-right: 10px  ;
+    }
+    &:hover, &:active {
+      color: $mineShaft;
+      background-color: $alabaster;
+    }
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  &:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+}

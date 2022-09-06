@@ -1,0 +1,24 @@
+{
+  "name": "boosta",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "scss:build": "sass scss:public/css",
+    "sass-watch1": "sass --watch scss:public/css",
+    "sass-watch": "sass --watch scss/main.scss:public/css/app.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

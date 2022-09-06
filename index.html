@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="home">
+    <section class="row">
+        <div class="content">
+            <div class="label">MSI 2020</div>
+            <div class="form">
+                <div class="form-header">
+                    <h1>Hey!</h1>
+                    <h2>Let’s try to find a joke for you:</h2>
+                </div>
+                <form action="">
+                    <div class="select-type">
+                        <div class="form-group">
+                            <label for="random" class="container">Random
+                                <input type="radio" name="radio" id="random" value="random" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="form-group categories">
+                            <label for="caterogies" class="container">From caterogies
+                                <input type="radio" name="radio" id="caterogies" value="caterogies">
+                                <span class="checkmark"></span>
+                            </label>
+<!--                            <nav-panel categories="categories"></nav-panel>-->
+                        </div>
+                        <div class="form-group">
+                            <label for="search" class="container">Search
+                                <input type="radio" name="radio" id="search" value="search">
+                                <span class="checkmark"></span>
+                            </label>
+                            <input type="text" class="search" name="text" id="text" placeholder="Free text search...">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default">Get a joke</button>
+                </form>
+            </div>
+            <div class="jokes-list">
+                <div class="joke-item">
+
+                    <div class="like">
+                        <img src="/public/images/like.svg" alt="heart">
+                    </div>
+                    <div class="row">
+                        <div class="left">
+                            <img src="/public/images/comment.svg" alt="comment">
+                        </div>
+                        <div class="right">
+                            <div class="joke-id">
+                                <span>ID: </span><a href="https://api.chucknorris.io/jokes/XNaAxUduSw6zANDaIEab7A">XNaAxUduSw6zANDaIEab7A</a>
+                            </div>
+                            <div class="joke-text">
+                                <span>No one truly knows who's Chuck Norris' real father. No one is biologically strong enough for this. He must've conceived himself.</span>
+                            </div>
+                            <div class="row joke-footer">
+                                <div class="updated">
+                                    <span>Last update:</span><span id="hours">1923</span><span> hours ago</span>
+                                </div>
+                                <div class="category">celebrity</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="title">
+                <span>Favourite</span>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="components/nav-panel.js"></script>
+<script src="app.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>-->
+</body>
+</html>
