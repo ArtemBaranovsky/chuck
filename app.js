@@ -147,7 +147,7 @@ each(document.querySelectorAll('input[type="radio"]'), () => {
           document.querySelector('.nav-panel').style.display = 'none';
         }
         if (el.target.value === 'categories') {
-          document.querySelector('.nav-panel').style.display = 'flex';
+          document.querySelector( '.nav-panel').style.display = 'flex';
         }
         // if (el.target.value !== undefined) {
         //         let inputValue = el.target.value; // $(this).attr()
